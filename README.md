@@ -3,7 +3,7 @@
 
 
 ## Problem Statement:
-*2019 College Admissions Cheating Scandal brought into focus the lengths that high-income parents will go to in order to game the system of standardized tests dominated by ACT and SAT. While not as egregious as outright cheating, economic bias has been something that both tests have often been accused of, and as a result, some universities are eliminating or making optional their requirement to have one of the tests submitted as part of admission process
+*2019 College Admissions Cheating Scandal brought into focus the lengths that high-income parents will go to in order to game the system of standardized tests dominated by ACT and SAT. While not as egregious as outright cheating, economic bias has been something that both tests have often been accused of, and as a result, some universities are eliminating or making optional their requirement to have one of the tests submitted as part of admission process.
 In this project we are hired by ACT, Inc to investigate some reports that ACT tests exhibit more economic bias than its rival SAT, and additionally, to isolate the top performers among low-income districts in order to learn from them. By doing that, we may be able to propose ways to eliminate or at least reduce the economic bias going forward.*
 
 
