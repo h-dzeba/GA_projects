@@ -4,7 +4,7 @@
 
 For centuries, historians have done the bulk of their work in the field. Be it an archaeological excavation on a remote location or arduous sifting through old documents in city archives, historians have seldom made a revolutionary new discovery just by sitting in their offices and pondering the times past.
 
-That has all changed over the past few decades as more and more research has been published online - from a detailed list of pottery found during an archaeological dig, to a groundbreaking new research articles shedding light on previously unknown aspects of life and times long ago, and even to those dusty old archival texts, they have all, slowly but surely, found their way on to the World Wide Web.
+That has all changed over the past few decades as more and more research has been published online - from a detailed list of pottery found during an archaeological dig, to a groundbreaking new research article shedding light on previously unknown aspects of life and times long ago, and even to those dusty old archival texts, they have all, slowly but surely, found their way on to the World Wide Web.
 
 With such a vast array of historical information at their fingertips, historians are no longer able to rely on simple browser search techniques to find the relevant content. As a result, a top university has hired us to build a machine learning model which can perform that search for them, both for history, as well as, down the road, for other academic departments.
 
@@ -15,7 +15,7 @@ Why did we choose to start with history? There are several reason, but the main 
 
 The first stage of teaching the machine to recognize topics is to train them to distinguish between only a pair of them. This is where this project comes in.
 
-We have chosen to train and test the model on Reddit website, namely, its two subreddits dedicated to Ancient Greece and Ancient Rome. Reddit, as an online public forum, has a wide variety of participants - from university professors to teenagers, and as such, represents a microcosm of online experience. Another benefit is that the two ancient civilizations are far removed from current events, pop culture and vitriolic debates that pervade online spaces, and yet, because of their importance in the development of our civilization, they still manage to have active subreddits with close to 50k followers. Such a diverse, but relatively serious set of followers should produce less spam and more useful vocabulary for the machine to train on than most other subreddits.
+We have chosen to train and test the model on Reddit website, namely, its two subreddits dedicated to Ancient Greece and Ancient Rome. Reddit, as an online public forum, has a wide variety of participants - from university professors to teenagers, and as such, represents a microcosm of online experience. Another benefit is that the two ancient civilizations are far removed from current events, pop culture and vitriolic debates that pervade online spaces, and yet, because of their importance in the development of our civilization, they still manage to have active subreddits with close to 50k followers each. Such a diverse, but relatively serious set of followers should produce less spam and more useful vocabulary for the machine to train on than most other subreddits.
 
 In this first step of the project we will develop a model that can learn to distinguish between texts topics on ancient Rome and Greece based on 6000 posts taken from Reddit. 
 
@@ -25,9 +25,9 @@ Further on down the line, the model will have to be trained to distinguish betwe
 
 For the purposes of the project, our model evaluation will mostly be based on total accuracy - basically, the percentage of correct predictions. Since there is no real difference between mistaking topic number one for number two vs vice versa, there is no real point to have classification metrics of 1 for positive outcome and 0 for negative. Granted, we will still use 1 and 0, but only in purely nominal terms, with 1 representing greece and 0 rome.
 
-Concepts of false positive and false negative are likewise not used in this study, and also, precision will not be split in sensitivity (for false positives) and specificity (for negatives). As neither greece nor rome are inherently positive or negative, such concepts have no place in our project (unless a build-in function automatically displays them).
+Concepts of false positive and false negative are likewise not used in this study, and also, precision will not be split in sensitivity (for false positives) and specificity (for negatives). As neither greece nor rome are inherently positive nor negative, such concepts have no place in our project (unless a build-in function automatically displays them).
 
-As far as right/wrong predictions are concerned we will use adapted precision metrics we will call "rome recall" and "greece recall". As the name implies, they describe to total rome( greece) outcomes correctly predicted out of the entire number of rome(greece) outcomes in the dataset.
+As far as right/wrong predictions are concerned, we will use adapted precision metrics we will call "rome recall" and "greece recall". As the name implies, they describe to total rome( greece) outcomes correctly predicted out of the entire number of rome(greece) outcomes in the dataset.
 
 ## Models developed
 
@@ -61,18 +61,18 @@ As far as right/wrong predictions are concerned we will use adapted precision me
 - with more resources, building a language library would provide most benefits when it comes to international history. Basing decision on foreign alpahbets rather than excluding them through stopwords would definitely benefit the scores
 - as University's goal is not to make money, but rather, to promote academic research, our projects wasn't as focused on uncovering the inclinations and propensities of the people who write the posts in order to target them with adds. Still, while we don't have to worry about who writes the posts that our model reads, we do have to worry about academics who will use our model to get their weekly or monthly rundown of what was published in their field. Testing the wrong predictions and lists of important words regularly can therefore serve as an early warning system of intrusion of spam into our dataset, and thus ensure quality product for professors, researches and students for years to come    
 
-## Some issue with our model
+## Issues with our model
 - ancient rome/greece is the first model developed as part of our effort to develop a machine-learning product that can search the internet for content from various academic disciplines. future models to distinguish different pairs of topics will be much faster and easier to implement
 - there will however be some stumbling blocks. one that sticks out in particular is the issue of stopwords. we relied a lot on them to train the model properly and it took us a few iterations until we settled on the set of stopwords that works well. Each new topic would require a completely new set of stopwords added to the default ones.
 - as individual models are concerned, we chose a particular Naive Bayes one for its simplicity, accuracy and interpretability. SVM shows a lot of promise by being able to predict training data with almost 100% accuracy. if we can invest more time and training into it, maybe it could increase its test scores as well, and become our go-to model 
 - another advantage of our chosen model is that it didn't use any greek words to aid it in prediction. wowever, if more foreign alphabets get scraped into our future data (chinese, arabic), removing them might not be the proper course of action. Using only latin letters will prove to be a huge drawback, especially in the history deparment that deals in many different cultures, letters and languages, some of them extinct
 - one of the unusual aspects of our model is how random forest and SVM vacillated between overpredicting greece to overpredicting rome based upon the stopwords given,  while Naive Bayes did not. We would love to subject this oddity to greater scrutiny when time allows.
     
-## The Way Forward
+## Next Steps
 
-As stated in the background section of this project, we envision this entire project to be just the first step in unfettered internet search for any material that relates to any of the University's academic departments. No person can keep up with the amount of materials that get published daily, and intelligent machines doing the search work for us is the only way to go. The next steps will be, in order:
+As stated in the background section of this file, we envision this entire project to be just the first step in the development of unfettered internet search for any material that relates to any of the University's academic departments. No person can keep up with the amount of materials that get published daily, and intelligent machines doing the search work for us is the only way to go. The next steps will be, in order:
 - get feedback from the University on the current model, make improvements based on it.
-- expand the model to be able to recognize more historical topics, and not just two, but 3, 4,...n at a time
-- configure the model to be able to categorize text as 'other' when it does not meet the threshold required to be put in any of the proposed categories
+- expand the model to be able to recognize more historical topics, and not just two, but 3, 4, and more at a time
+- configure the model to be able to categorize text as 'other' when it does not meet the threshold required to be put into any of the proposed categories
 - once historical topics are exhausted, repeat the process in other academic fields
 
