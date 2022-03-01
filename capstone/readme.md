@@ -45,7 +45,8 @@ Categorical Features: DeviceType, DeviceInfo, id_12 - id_38
 
 ![Test Image 2](“/images/model-table.png”)
 
-<img src="/images/model-table.png" alt="Alt text" title="Optional title">
+<img src="./images/model-table.png" alt="Alt text" title="Optional title">
+
 ## Conclusions
 
 - As we can see in the table above, many of the models we ran have a similar ROC-AUC score in the range of 0.88-0.90. Of course, when it comes to issues as important at credit card fraud, every percentage point matters, and in a dataset as unbalanced as this one, where only 3.5% of rows are fraud, every little improvement is hard to come by.
