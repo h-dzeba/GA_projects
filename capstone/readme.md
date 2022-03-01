@@ -43,12 +43,13 @@ Variables in this table are identity information – network connection informat
 
 Categorical Features: DeviceType, DeviceInfo, id_12 - id_38
 
-## Model Summary
 
+## Models
 
 
 
 <img src="https://github.com/h-dzeba/GA_projects/blob/main/capstone/Images/model-table.png" alt="Alt text" title="Optional title">
+
 
 
 
