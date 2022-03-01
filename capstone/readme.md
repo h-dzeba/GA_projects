@@ -8,7 +8,7 @@ It was recently documented how, on the dark web, credit card data for nearly hal
 
 While the actual, plastic credit cards have recently been made more secure due to enhanced security features and compliance standards, we have seen fraud shift to online transactions which now account for roughly 75 percent of all card fraud. It is the best of both of worlds for the thieves, more transactions mean more chance to steal data, and it also means that once stolen there will no shortage of opportunities to make illicit purchases.
 
-## TASK
+## Task
 
 As the pandemic has made the credit card fraud a hot topic again, we decided to revisit one of the biggest fraud-related datasets, the one published by Vesta Corporation in 2019 as part of the Kaggle competition. Vesta is end-to-end transaction guarantee platform for online purchases, and have provided us with two files of data, with hundereds of columns and hunderds of thousands of rows each.
 
@@ -43,7 +43,13 @@ Variables in this table are identity information – network connection informat
 
 Categorical Features: DeviceType, DeviceInfo, id_12 - id_38
 
-![Test Image 2](“/images/model-table.png”)
+## Model Summary
+
+
+
+
+<img src="https://github.com/h-dzeba/GA_projects/blob/main/capstone/Images/model-table.png" alt="Alt text" title="Optional title">
+
 
 
 ## Conclusions
